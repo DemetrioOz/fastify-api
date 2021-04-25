@@ -1,7 +1,7 @@
 import { FastifyInstance } from 'fastify'
 
-import indexRoute from './controllers/index'
+import userRouter from './user.routes'
 
 export default async function router(fastify: FastifyInstance) {
-    fastify.register(indexRoute, { prefix: '/users' })
+    fastify.register(userRouter, { prefix: '/users' })
 }

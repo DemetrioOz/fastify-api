@@ -1,5 +1,5 @@
 import * as fastify from 'fastify'
-import routers from './router'
+import routers from './routes/router'
 
 const app: fastify.FastifyInstance = fastify.fastify({
     logger: {
@@ -7,6 +7,7 @@ const app: fastify.FastifyInstance = fastify.fastify({
     }
 })
 
+app.register(require('fastify-cors'))
 app.register(routers)
 
 export default app
