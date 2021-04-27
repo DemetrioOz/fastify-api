@@ -11,13 +11,6 @@ export default {
                 type: 'string',
                 maxLength: 40
             },
-            gender: {
-                type: 'string',
-                enum: ['m', 'f']
-            },
-            age: {
-                type: 'integer'
-            },
             password: {
                 type: 'string',
                 minLength: 3,
@@ -27,8 +20,6 @@ export default {
         required: [
             'name',
             'email',
-            'gender',
-            'age',
             'password'
         ]
     }

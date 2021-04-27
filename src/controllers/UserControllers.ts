@@ -1,6 +1,6 @@
 import { FastifyRequest, FastifyReply } from 'fastify'
 
-export default class UserController {
+export default class UserControllers {
 
     async create(req: FastifyRequest, rep: FastifyReply) {
         rep.send({ message: 'bombou todas' })

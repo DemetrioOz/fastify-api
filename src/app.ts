@@ -1,7 +1,11 @@
-import * as fastify from 'fastify'
-import routers from './routes/router'
+import 'reflect-metadata'
 
-const app: fastify.FastifyInstance = fastify.fastify({
+import fastify, { FastifyInstance } from 'fastify'
+import routers from './routes/router'
+import '@shared/infra/typeorm'
+import '@shared/container'
+
+const app: FastifyInstance = fastify({
     logger: {
         level: 'info'
     }
